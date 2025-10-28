@@ -8,12 +8,12 @@ cd /Users/azami/Documents/Bioinformatics/RNASeq_pipeline/
 
 
 # STEP 1: Run fastqc
-#fastqc data/demo.fastq -o data/
+fastqc data/demo.fastq -o data/
 
 
 # run trimmomatic to trim reads with poor quality
-#java -jar ~/Documents/Bioinformatics/RNASeq_pipeline/Trimmomatic-0.39/trimmomatic-0.39.jar SE -threads 4 data/demo.fastq data/demo_trimmed.fastq TRAILING:10 -phred33
-#echo "Trimmomatic finished running!"
+java -jar ~/Documents/Bioinformatics/RNASeq_pipeline/Trimmomatic-0.39/trimmomatic-0.39.jar SE -threads 4 data/demo.fastq data/demo_trimmed.fastq TRAILING:10 -phred33
+echo "Trimmomatic finished running!"
 
 #fastqc data/demo_trimmed.fastq -o data/
 
@@ -26,8 +26,8 @@ cd /Users/azami/Documents/Bioinformatics/RNASeq_pipeline/
 
 # run alignment
  
-#hisat2 -q --rna-strandness R -x HISAT2/grch38/genome -U data/demo_trimmed.fastq | samtools sort -o HISAT2/demo_trimmed.bam
-#echo "HISAT2 finished running!"
+hisat2 -q --rna-strandness R -x HISAT2/grch38/genome -U data/demo_trimmed.fastq | samtools sort -o HISAT2/demo_trimmed.bam
+echo "HISAT2 finished running!"
 # STEP 3: Run featureCounts - Quantification
 
 
