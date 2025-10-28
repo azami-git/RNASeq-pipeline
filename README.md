@@ -18,11 +18,6 @@ The pipeline is simple, reproducible, and can be run entirely on macOS or Linux.
 
 ---
 
-## 🧩 **Project Structure**
-RNASeq_pipeline_project/
-├── RNASeqpipeline.sh # Main pipeline script
-├── data/ # Raw & processed FASTQ files
-├── HISAT2/ # Alignment indices & BAM files
-├── quants/ # Quantification outputs
-├── README.md
-└── .gitignore
+**Download the example FASTQ file:**
+   📂 [Download Demo Data (Google Drive)](https://drive.google.com/file/d/1DGHjbhcRy_zTm6H9C_AUpkzBML-JhtA3/view?usp=sharing)
+
